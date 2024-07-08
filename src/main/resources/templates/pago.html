@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PAGOPRODUCTO1</title>
+	<link th:href="@{/mdbootstrap/css/mdb.min.css}" rel="stylesheet">
+	<link th:href="@{/css/pago.css}" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+	<script th:src="@{/js/java.js}"></script>
+</head>
+<body>
+	<header>
+	        <nav class="menu-container">
+	            <ul class="menu">
+	                <li class="menu-item inicio">
+	                    <a href="#">
+	                        <img th:src="@{/img/GamerStar1.png}" width="50px" height="45px" alt="Inicio">
+	                    </a>
+	                </li>
+	            </ul>
+	        </nav>
+	    </header>
+	    <!--METODO DE PAGO-->
+	    <div class="contenedor">
+	        <div class="lado-izquierdo">
+	            <div id="cuadro1" style="margin-top: -10px;">
+	                <h2 style="font-weight: 700;">Métodos de pago</h2>
+	                <p style="margin-top: 10px;">Jeremi Mbappe Lewandoski +51 996 969 669</p>
+	                <p>Los Laureles Mz.52 Lt.30 Pamplona alta</p>
+	                <p>SAN JUAN DE MIRAFLORES, LIMA, Peru, 15804</p>
+	            </div>
+	            <div id="cuadro2">
+	                <h2 style="font-weight: 700;">Métodos de pago</h2>
+	                <img th:src="@{/img/Visa.png}" alt="Imagen del Cuadro 2">
+	                <form th:action="@{/pago/tarjeta}" th:object="${tarjeta}" method="post">
+	                    <input style=" margin-left: 100px;"  
+						type="text" 
+						id="numeroTarjeta" 
+						name="numeroTarjeta" 
+						th:field="*{numeroTarjeta}" 
+						placeholder="Numero de tarjeta..."
+						required>
+						<button class="pagar-btn" type="submit">Pagar</button>
+	                </form>
+	            </div>
+	            <div id="cuadro3">
+	                <h2 style="font-weight: 700; margin-top: 10px; margin-bottom: 10px;">Mi carrito de compras</h2>
+	                <div class="producto">
+	                    <img th:src="@{/img/VJ-5.png}" alt="Imagen 1 del Cuadro 3">
+	                    <div class="producto-detalles">
+	                        <h3>Dragon Ball Xenoverse 2</h3>
+	                        <div class="precio-texto">
+	                            <span class="texto-amarillo">Premium Edition
+	                            </span>
+	                            <p class="precio" style="margin-left: 110px;">S/ 299.00</p>
+	                        </div>
+	                        <div class="iconos">
+	                            <i class="fas fa-heart" style="margin-top: -30px;"></i>
+	                            <i class="fas fa-trash-alt"></i>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="producto">
+	                    <img th:src="@{/img/juego3.jpeg}" alt="Imagen 2 del Cuadro 3">
+	                    <div class="producto-detalles">
+	                        <h3>Forza Horizon 5 Premium Edition</h3>
+	                        <div class="precio-texto">
+	                            <span class="texto-amarillo">La Oferta termina en: 23 dias</span>
+	                            <p class="precio" style="margin-left: 60px;">S/ 73.00</p>
+	                        </div>
+	                        <div class="iconos">
+	                            <i class="fas fa-heart" style="margin-top: -30px;"></i>
+	                            <i class="fas fa-trash-alt"></i>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="producto">
+	                    <img th:src="@{/img/juego2.jpeg}" alt="Imagen 2 del Cuadro 3">
+	                    <div class="producto-detalles">
+	                        <h3>Final Fantasy XIV: A Realm Reborn</h3>
+	                        <div class="precio-texto">
+	                            <span class="texto-amarillo">La Oferta termina en: 23 dias</span>
+	                            <p class="precio" style="margin-left: 60px;">S/ 66.90</p>
+	                        </div>
+	                        <div class="iconos">
+	                            <i class="fas fa-heart" style="margin-top: -30px;"></i>
+	                            <i class="fas fa-trash-alt"></i>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="producto">
+	                    <img th:src="@{/img/juego4.jpeg}" alt="Imagen 2 del Cuadro 3">
+	                    <div class="producto-detalles">
+	                        <h3>Street Fighter V Champion Edition</h3>
+	                        <div class="precio-texto">
+	                            <span class="texto-amarillo">La Oferta termina en: 23 dias</span>
+	                            <p class="precio" style="margin-left: 60px;">S/ 150.00</p>
+	                        </div>
+	                        <div class="iconos">
+	                            <i class="fas fa-heart" style="margin-top: -30px;"></i>
+	                            <i class="fas fa-trash-alt"></i>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="lado-derecho">
+	            <div id="cuadro4">
+	                <h2 style="font-weight: 700; margin-bottom: 10px;">Metodo de compra</h2>
+	                <div class="subtotal" style="margin-top: -30px;">
+	                    <p style="margin-top: 15px;">Subtotal</p>
+	                    <p style="margin-right: 50px; margin-top: 15px;">S/ 588.90</p>
+	                </div>
+	                <div class="subtotal" style="margin-top: -10px;">
+	                    <p>Codigo Promocional</p>
+	                    <p style="margin-right: 50px;">Si</p>
+	                </div>
+	                <div class="total" style="margin-top: -10px;">
+	                    <p>Costo de Envio</p>
+	                    <p style="margin-right: 50px;">S/. 0</p>
+	                </div>
+	                <div class="total">
+	                    <p style="font-size: 22px; margin-top: 16px; font-weight: 700;" >Total</p>
+	                    <p style="margin-right: 50px;  font-size: 20px; font-weight: 700; margin-top: 20px;">S/ 588.90</p>
+	                </div>
+	                <!--<button class="pagar-btn" type="submit">Pagar 4</button>-->
+	            </div>
+	            <div id="cuadro5" style="padding-top: 10px; padding-left: 30px;">
+	                <h2 style="font-weight: 700; margin-top: 10px; margin-bottom: 20px;">Canjear Código</h2>
+	                <form action="#">
+	                    <input type="text" placeholder="Ingrese el código aquí...">
+	                </form>
+	            </div>
+	        </div>
+	    </div>
+</body>
+</html>

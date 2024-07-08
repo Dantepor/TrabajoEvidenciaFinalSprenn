@@ -1,0 +1,233 @@
+@charset "ISO-8859-1";
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif; /* Aplica Montserrat como la fuente principal */
+    margin: 0;
+    padding: 0;
+    background-color: #c0bcbc; /* Cambia el color de fondo a gris */
+}
+
+/* Menú */
+header {
+    background-color: white; /* Fondo blanco para el menú */
+    border-bottom: 2px solid gray; /* Borde inferior de color plomo */
+    box-shadow: none; /* Elimina la sombra */
+    width: 98%;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.menu-container {
+    width: 100%;
+    margin: -10px auto;
+    padding: 0;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color: transparent; /* Cambia el fondo a transparente */
+}
+
+.menu-item {
+    text-align: center;
+    border-right: none; /* Elimina el borde derecho */
+    padding: 8px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item.inicio a img {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 60px; /* Aumenta el tamaño de la imagen */
+    height: 55px; /* Aumenta el tamaño de la imagen */
+}
+
+.menu-item.inicio {
+    margin-right: 10px;
+}
+
+/*METODO DE COMPRA*/
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 60px; /* 40px de padding a la izquierda y derecha del contenedor */
+}
+
+.lado-izquierdo {
+    flex: 3; /* El lado izquierdo ocupa 3 partes del espacio */
+    background-color: #c0bcbc; /* Fondo blanco para el lado izquierdo */
+}
+
+.lado-derecho {
+    flex: 2; /* El lado derecho ocupa 2 partes del espacio */
+    background-color: #c0bcbc; /* Fondo blanco para el lado derecho */
+}
+
+#cuadro1 {
+    margin-bottom: 10px; /* Espacio de 10px entre cada cuadro */
+    background-color: rgb(255, 255, 255); /* Fondo blanco para cada cuadro */
+    width: 630px;
+    padding: 10px;
+}
+
+
+#cuadro1 p {
+    line-height: 0.1;
+    font-size: 13px;
+    margin-left: 8px;
+}
+
+#cuadro2 {
+    margin-bottom: 10px; /* Espacio de 10px entre cada cuadro */
+    background-color: rgb(255, 255, 255); /* Fondo blanco para cada cuadro */
+    width: 630px;
+    padding: 10px;
+}
+
+#cuadro2 img {
+    width: 50px;
+    margin-left: 20px;
+    margin-bottom: -35px;
+}
+
+#cuadro3 {
+    margin-bottom: 10px; /* Espacio de 10px entre cada cuadro */
+    background-color: rgb(255, 255, 255); /* Fondo blanco para cada cuadro */
+    width: 630px;
+    padding: 10px;
+}
+
+#cuadro3 .producto {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+#cuadro3 .producto img {
+    width: 100px; /* Ajusta el tamaño de las imágenes según necesites */
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+#cuadro3 .producto-detalles {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#cuadro3 .producto-detalles h3 {
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 5px;
+    color: #666;
+    font-weight: 700;
+}
+
+#cuadro3 .producto-detalles .precio-texto {
+    display: flex;
+    align-items: center;
+}
+
+#cuadro3 .producto-detalles .precio {
+    font-size: 15px;
+    margin: 0;
+    font-weight: 700;
+    color: #666;
+}
+
+.texto-amarillo {
+    background-color: purple ;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 5px 5px;
+    font-size: 10px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.iconos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 10px;
+}
+
+.iconos i {
+    margin-bottom: 5px;
+}
+
+#cuadro4 {
+    margin-bottom: 10px; /* Espacio de 10px entre cada cuadro */
+    background-color: rgb(255, 255, 255); /* Fondo blanco para cada cuadro */
+    height: 330px;
+    margin-left: -40px;
+    margin-top: -12px;
+}
+
+#cuadro5 {
+    margin-bottom: 10px; /* Espacio de 10px entre cada cuadro */
+    background-color: rgb(255, 255, 255); /* Fondo blanco para cada cuadro */
+    height: 160px;
+    margin-left: -40px;
+}
+
+.lado-izquierdo h2 {
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: -3px;
+    color: #666;
+}
+
+/* Añadido estilo para el botón de pago */
+#cuadro2 .pagar-btn {
+    background-color: purple;
+    color: white;
+    padding: 10px 40px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    font-size: 13px;
+    margin-top:10px;
+    margin-left:250px;
+    border-radius: 20px;
+    font-weight: 700;
+
+}
+
+
+#cuadro4 h2{
+    font-size: 17px;
+    padding: 20px;
+    color: #666;
+}
+
+/* Añadido estilo para los subtotales y total */
+#cuadro4 .subtotal,
+#cuadro4 .total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    margin-left: 20px;
+}
+
+
+#cuadro5 h2{
+    font-size: 18px;
+}
+
+#cuadro5 input{
+    padding: 10px 90px;
+}
+
+#cuadro2 input{
+    padding: 9px 80px;
+    margin-top: -60px;
+}

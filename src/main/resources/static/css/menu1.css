@@ -1,0 +1,910 @@
+@charset "ISO-8859-1";
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif; /* Aplica Montserrat como la fuente principal */
+    margin: 0;
+    padding: 0;
+}
+
+/* PRIMER CUADRO DEL MENU*/
+
+header {
+    background-color: transparent; /* Cambia el fondo a transparente */
+    border-bottom: 2px solid gray; /* Borde inferior de color plomo */
+    box-shadow: none; /* Elimina la sombra */
+    width: 100%;
+}
+
+.menu-container {
+    width: 100%;
+    margin: -10px auto;
+    padding: 0;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color: transparent; /* Cambia el fondo a transparente */
+}
+
+.menu-item {
+    text-align: center;
+    border-right: none; /* Elimina el borde derecho */
+    padding: 8px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item.inicio a img {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 60px; /* Aumenta el tamaño de la imagen */
+    height: 55px; /* Aumenta el tamaño de la imagen */
+}
+
+.menu-item.inicio {
+    margin-right: 10px;
+}
+
+.menu-item.ofertas-small {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.menu-item.categorias {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.menu-item.contacto {
+    margin-left: -5px;
+    margin-right: 30px;
+}
+
+.menu-item.acerca-small {
+    margin-left: -20px;
+    margin-right: 35px;
+}
+
+.menu-item.productos-large {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.menu-item:last-child {
+    border-right: none;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 2px solid gray; /* Borde inferior en plomo */
+    transform: translateX(-70px); /* Mueve la barra de búsqueda 30px hacia la izquierda */
+    width: 500px; /* Ajusta el ancho de la barra de búsqueda */
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    color: gray; /* Color de la lupa en plomo */
+    pointer-events: none;
+}
+
+.search-bar input[type="text"] {
+    flex: 1;
+    padding: 8px 8px 8px 32px; /* Aumenta la distancia entre el icono y el texto */
+    border: none;
+    border-bottom: none; /* Eliminamos el borde inferior aquí */
+    border-radius: 0;
+    outline: none;
+    margin-right: 10px; /* Aumenta la distancia entre el texto "Buscar" y "Todas las categorías" */
+    color: #888;
+}
+input::placeholder{
+    color: #bbb4b4;
+}
+.dropdown .dropbtn {
+    cursor: pointer;
+    padding: 8px 16px;
+    background-color: transparent;
+    color: gray; /* Cambia el color del texto a plomo */
+    border: none;
+    font-size: 12px; /* Tamaño de letra reducido */
+    display: flex;
+    align-items: center;
+    font-weight: bold; /* Añade grosor al texto "Todas las categorías" */
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    cursor: pointer;
+    padding: 8px 16px;
+    background-color: transparent;
+    color: gray; /* Cambia el color del texto a plomo */
+    border: none;
+    font-size: 14px; /* Tamaño de letra reducido */
+    display: flex;
+    align-items: center;
+}
+
+.dropbtn i {
+    margin-left: 5px; /* Espacio entre el texto y la flecha */
+    color: gray; /* Cambia el color del icono a plomo */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: gray; /* Cambia el color del texto a plomo */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    color: #65388c; /* Cambia el color del texto al pasar el ratón */
+}
+
+.menu-item a {
+    font-size: 12px;
+    display: block;
+    padding: 18px 0;
+    line-height: 1.2;
+    font-weight: bold; /* Añade grosor al texto */
+    color: gray; /* Cambia el color del texto a plomo */
+    text-decoration: none;
+}
+
+.menu-item a:hover,
+.menu-item a:hover i {
+    color: #65388c; /* Cambia el color del texto y del icono al pasar el ratón */
+}
+
+/*SEGUNDA CUADRO DEL MENU*/
+.submenu {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: -15px;
+}
+
+.submenu-item {
+    margin: 0 30px; /* Ajusta el margen horizontal */
+    font-size: 12px;
+    font-weight: bold;
+    color: gray;
+    text-decoration: none;
+}
+.submenu-container {
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+    margin-bottom: 0px; /* Agrega 30px de espacio hacia abajo */
+}
+.submenu-item:hover {
+    color: #65388c; /* Cambia el color del texto al pasar el ratón */
+}
+
+/*IMAGEN DE LOS VIDEOJUEGOS*/
+.image-container {
+    position: relative;
+    width: 100%; /* Ajustamos la anchura al 100% del ancho de la ventana */
+    height: 525px; /* Ajustamos la altura */
+    margin-top: 25px;
+    overflow: hidden;
+    background-image: url('/img/bannerjuegos.png');
+    background-size: cover; /* La imagen se ajusta manteniendo su relación de aspecto y cubre todo el contenedor */
+    background-repeat: no-repeat;
+    background-position: left; /* Alinea la imagen hacia la izquierda */
+    font-family: 'Montserrat', Arial, sans-serif; /* Aplica la fuente Montserrat */
+    margin-bottom: 30px;
+}
+
+.image-content {
+    position: absolute;
+    top: 50%;
+    left: 5%; /* Ajusta el contenido hacia la izquierda */
+    transform: translateY(-50%);
+    text-align: left; /* Alinea el texto hacia la izquierda */
+    color: white;
+}
+.image-content h1 {
+    font-size: 50px; /* Aumenta el tamaño del título */
+    margin-bottom: 15px;
+    font-weight: 900; /* Añade grosor al título */
+}
+.image-content h2 {
+    font-size: 50px; /* Aumenta el tamaño del título */
+    margin-bottom: 40px;
+    margin-top: -15px;
+    font-weight: 900; /* Añade grosor al título */
+}
+
+.image-content p {
+    font-size: 11px;
+    line-height: 0.8;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.buy-button {
+    background-color: yellow;
+    color: black;
+    padding: 15px 100px; /* Aumenta el tamaño del botón */
+    border: none;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 25px; /* Aumenta el tamaño del texto del botón */
+    cursor: pointer;
+    margin-top: 40px; /* Añade 30px de separación entre el texto y el botón */
+    transform: skew(-10deg); /* Inclina el texto hacia la derecha */
+    display: inline-block; /* Asegura que el botón es un bloque en línea */
+    text-align: center; /* Alinea el texto en el centro del botón */
+}
+
+.buy-button:hover {
+    background-color:white; /* Cambia el color de fondo al pasar el ratón */
+}
+
+.percentage-button {
+    background-color: yellow;
+    color: black;
+    padding: 5px 15px; /* Ajusta el tamaño del botón según el texto */
+    border: none;
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 40px; /* Ajusta el tamaño del texto del botón */
+    cursor: default; /* Evita que se pueda hacer clic */
+    transform: skew(-10deg); /* Inclina el texto hacia la derecha */
+    display: inline-block; /* Asegura que el botón es un bloque en línea */
+    text-align: center; /* Alinea el texto en el centro del botón */
+    margin-top: 40px;
+    border-radius: 15px;
+}
+
+.price-container {
+    display: inline-block; /* Asegura que el contenedor tenga el ancho del texto */
+}
+
+.price-text {
+    font-size: 56px; /* Ajusta el tamaño del texto */
+    color: rgb(255, 255, 255); /* Color del texto */
+    margin-left: 50px;
+    font-weight: 700;
+}
+
+/*BARRA DE BUSQUEDA DE JUEGOS*/
+.search-container1 {
+    display: flex; /* Utilizamos flexbox */
+    justify-content: center; /* Centramos horizontalmente */
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}
+
+.search-bar1 {
+    width: 300px; /* Ancho de la barra de búsqueda */
+    height: 40px; /* Altura de la barra de búsqueda */
+    border-radius: 20px; /* Ajusta el radio de borde para hacerla redondeada */
+    border: 2px solid #65388c; /* Borde de color morado */
+    padding: 0 40px; /* Espacio para el texto y el icono */
+    font-size: 16px; /* Tamaño del texto */
+}
+
+.search-icon-container1 {
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    margin-left: 340px; /* Ajusta el margen izquierdo para compensar el espacio del ícono */
+    position: absolute; /* Establece la posición absoluta para el contenedor del ícono */
+    margin-top: 3px;
+}
+
+.search-icon-container1 i {
+    color: white; /* Color del icono */
+    background-color: #65388c; /* Color del fondo del círculo */
+    border-radius: 50%; /* Ajusta el radio de borde para hacer un círculo */
+    padding: 10px; /* Espacio alrededor del icono */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el icono */
+}
+
+/*PRIMER CUADRO DEL MENU*/
+
+.latest-releases {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.latest-releases h2 {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    font-size: 33px;
+    color: #888;
+    font-weight: 700;
+}
+
+/*.latest-accessories h2 {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    font-size: 33px;
+    color: #888;
+}*/
+
+.release-grid {
+    display: flex;
+    justify-content: space-around;
+    margin: 0px 50px; /* Añade margen a los lados */
+}
+
+.release-item {
+    text-align: center;
+    width: 22%; /* Ajusta el ancho de cada elemento */
+    margin-bottom: 20px; /* Aumenta el margen inferior */
+    border: 1px solid black; /* Agrega un borde negro de 1px */
+    border-radius: 10px; /* Agrega bordes redondeados */
+    padding: 2px; /* Añade un poco de espacio interno */
+}
+
+.release-item img {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.release-item p {
+    font-weight: 500; /* Cambia el peso del texto */
+    font-size: 16px;
+}
+
+.release-title {
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    margin-left: 8px;
+    font-weight: 700;
+}
+
+.release-title1 {
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    margin-left: 8px;
+    font-weight: 700;
+}
+
+.release-date {
+    text-align: left;
+    margin-bottom: 0px;
+    font-size: 12px !important; /* Tamaño de letra */
+    margin-top: -4px; /* Ajuste hacia arriba */
+    margin-left: 10px;
+    margin-bottom: 10px;
+    color: #7e7979;
+}
+
+.release-date1 {
+    text-align: left;
+    margin-bottom: 0px;
+    font-size: 12px !important; /* Tamaño de letra */
+    margin-top: -4px; /* Ajuste hacia arriba */
+    margin-left: 10px;
+    margin-bottom: 22px;
+    color: #7e7979;
+}
+
+.offer-ends {
+    background-color: #65388c;
+    color: white;
+    padding: 5px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-top: 10px; /* Margen superior */
+    display: inline-block; /* Cambia a bloque en línea */
+    margin-right: 90px;
+
+}
+
+.offer-ends1 {
+    background-color: rgb(218, 113, 15);
+    color: white;
+    padding: 5px 40px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-top: 0px; /* Margen superior */
+    display: inline-block; /* Cambia a bloque en línea */
+    margin-right: 90px;
+
+}
+
+.offer-ends11 {
+    background-color: rgb(218, 113, 15);
+    color: white;
+    padding: 5px 40px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-top: 10px; /* Margen superior */
+    display: inline-block; /* Cambia a bloque en línea */
+    margin-right: 90px;
+
+}
+
+.offer-ends11 p {
+    font-size: 10px; /* Tamaño de texto reducido */
+    margin: 0; /* Elimina el margen */
+}
+
+.offer-ends2 {
+    background-color:#65388c;
+    color: white;
+    padding: 5px 40px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-top: 10px; /* Margen superior */
+    display: inline-block; /* Cambia a bloque en línea */
+    margin-right: 105px;
+
+}
+
+.offer-ends2 p {
+    font-size: 10px; /* Tamaño de texto reducido */
+    margin: 0; /* Elimina el margen */
+}
+
+.offer-ends1 p {
+    font-size: 10px; /* Tamaño de texto reducido */
+    margin: 0; /* Elimina el margen */
+}
+
+.offer-ends p {
+    font-size: 10px; /* Tamaño de texto reducido */
+    margin: 0; /* Elimina el margen */
+}
+
+.offer-days {
+    font-weight: bold; /* Hace que los días se vean en negrita */
+}
+
+.offer-price {
+    font-size: 16px; /* Tamaño de texto ajustado */
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+    margin-right: 80px;
+    margin-bottom: 20px;
+}
+
+.offer-price1 {
+    font-size: 16px; /* Tamaño de texto ajustado */
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+    margin-right: 180px;
+    margin-bottom: 20px;
+}
+
+.offer-price p {
+    font-size: 15px; /* Reducir el tamaño del texto */
+    font-weight: bold;
+}
+
+.offer-price1 p {
+    font-size: 15px; /* Reducir el tamaño del texto */
+    font-weight: bold;
+}
+
+.offer-price p span {
+    font-size: 11px;
+}
+
+.prices{
+	font-size: 105px;
+}
+
+.original-price {
+    text-decoration: line-through; /* Añade una línea a través del precio original */
+    color: gray;
+    font-size: 14px; /* Tamaño de texto ajustado */
+}
+
+.discount {
+    background-color: #65388c;
+    color: white;
+    padding: 2px 5px; /* Espaciado interno */
+    border-radius: 3px; /* Bordes redondeados */
+    font-size: 12px; /* Tamaño de texto reducido */
+    margin-left: 5px; /* Espaciado a la izquierda */
+}
+
+.release-item .ps5-image {
+    width: 35px; /* Tamaño original */
+    height: 20px; /* Cambiado a 20px */
+    margin-right: 160px;
+    margin-bottom: 0px;
+}
+
+.platform-icons {
+    display: inline-block;
+}
+
+.release-item .platform-icon {
+    width: 35px; /* Tamaño de las imágenes */
+    height: 20px;
+    margin-right: 0px; /* Espaciado entre las imágenes */
+    margin-bottom: -1px;
+}
+
+.release-item .platform-icon1 {
+    width: 35px; /* Tamaño de las imágenes */
+    height: 20px;
+    margin-right: 0px; /* Espaciado entre las imágenes */
+    margin-bottom: -1px;
+}
+
+.release-item .platform-icon2 {
+    width: 35px; /* Tamaño de las imágenes */
+    height: 20px;
+    margin-right: 90px; /* Espaciado entre las imágenes */
+    margin-bottom: -1px;
+}
+
+.release-item .platform-icon11 {
+    width: 35px; /* Tamaño de las imágenes */
+    height: 20px;
+    margin-right: 0px; /* Espaciado entre las imágenes */
+    margin-bottom: -1px;
+}
+
+.release-item .platform-icon21 {
+    width: 35px; /* Tamaño de las imágenes */
+    height: 20px;
+    margin-right: 120px; /* Espaciado entre las imágenes */
+    margin-bottom: -1px;
+}
+
+.heart-icon {
+    font-size: 20px; /* Ajusta el tamaño del icono del corazón */
+    color: rgb(201, 179, 179); /* Color inicial del icono del corazón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el icono del corazón */
+    margin-left: 15px; /* Espacio entre la imagen de PS5 y el icono del corazón */
+}
+
+.heart-icon.clicked {
+    color: #65388c !important; /* Color del icono del corazón al hacer clic */
+}
+
+/*SECCION DE GIFTCARDS*/
+.gift-card-container {
+    display: flex;
+    padding: 0 40px; /* Añade padding en izquierda y derecha */
+}
+
+.gift-card-left {
+    flex: 1;
+    padding: 20px;
+}
+
+.gift-card-left h3{
+	font-weight: 700;
+}
+
+.gift-card-title {
+    color: #65388c; /* Color morado */
+    margin-left: 90px;
+    font-size: 35px;
+    line-height: 0; /* Reduce el interlineado */
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.gift-card-text {
+    margin-top: 30px;
+    font-size: 25px;
+    margin-left: 90px;
+    line-height: 0.2; /* Reduce el interlineado */
+    font-weight: 700;
+    color: #6b6666;
+
+}
+
+.gift-card-button {
+    background-color: #65388c; /* Color morado */
+    color: white;
+    padding: 20px 55px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-left: 90px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.gift-card-right {
+    flex: 1;
+    padding: 20px; /* Añade padding al lado derecho de la imagen */
+}
+
+.gift-card-right img {
+    width: 100%; /* Ajusta la imagen al 100% del contenedor */
+    height: auto; /* Mantén la proporción de aspecto */
+}
+
+.seguido{
+    text-align: center;
+
+}
+
+.seguido h2 {
+    font-size: 23px;
+    color: #888;
+    margin-bottom: 40px;
+}
+
+/*ELECION DE TIPOS DE JUEGOS*/
+.square-container {
+    padding-left: 60px;
+    padding-right: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre las filas */
+}
+
+.square-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre los cuadrados */
+}
+
+.square {
+    background-color: rgb(224, 218, 218);
+    width: 100%;
+    max-width: calc(25% - 40px); /* 4 cuadrados por fila con espacio entre ellos */
+    aspect-ratio: 1 / 1; /* Cuadrado */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px; /* Opcional: Añadir bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: Añadir una sombra */
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    color: #888; /* Color del texto */
+    height: 170px;
+}
+
+/*BOTON DE VER MAS*/
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px; /* Espacio encima del botón */
+}
+
+.view-more-button {
+    background-color: #65388c; /* Color morado */
+    color: white; /* Color del texto */
+    padding: 15px 30px; /* Espaciado interno del botón */
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Montserrat', Arial, sans-serif; /* Aplica Montserrat como la fuente principal */
+    font-weight: 700;
+}
+
+.view-more-button:hover {
+    background-color: #502c6e; /* Color morado más oscuro al pasar el ratón */
+}
+
+/*PIE DE PAGINA*/
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    margin-top: 80px;
+    background-color: #65388c;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.footer-section img {
+    width: 60%;
+    border-radius: 5px;
+}
+
+.footer-images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.footer-images img {
+    width: calc(16% - 5px);
+    border-radius: 5px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: rgb(221, 213, 213);
+    font-weight: 700;
+}
+
+.footer-section p {
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: rgb(221, 213, 213);
+}
+
+.footer-section:first-child {
+    margin-right: 150px;
+}
+
+.footer-section-text {
+    margin-bottom: 10px;
+    color: rgb(221, 213, 213);
+    max-width: 400px; /* Ajusta el ancho máximo del contenedor del texto */
+    margin: 0 auto; /* Centra el contenedor del texto horizontalmente */
+    line-height: 1.1;
+}
+
+.footer-section-text p {
+    font-size: 12px;
+    text-align: justify; /* Justifica el texto para que ocupe todo el ancho del contenedor */
+}
+
+.footer-section:last-child img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.copyright-container {
+    background-color: rgb(5, 5, 5); /* Color de fondo blanco */
+    text-align: center; /* Centra el texto */
+    padding: 15px; /* Añade espacio alrededor del texto */
+}
+
+.copyright-container p {
+    margin: 0; /* Elimina el margen predeterminado */
+    font-size: 13px;
+    color: white;
+}
+
+/*VENTANA EMERGENTE*/
+.popup-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px; /* Tamaño de la ventana emergente */
+    height: 100%;
+    background-color: rgb(236, 233, 233);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.popup-content {
+    padding: 20px;
+}
+
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    margin-left: 19px;
+}
+
+.profile-image {
+    width: 110px; /* Tamaño de la imagen de perfil */
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+}
+
+.profile-details h2 {
+    margin: 0;
+}
+
+.options {
+    list-style-type: none;
+    padding: 0;
+}
+.options i{
+    margin-right: 30px;
+    color: #65388c;
+}
+.options a{
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #757070;
+}
+.options li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    font-weight: 700;
+    color: #888;
+    background-color: rgb(255, 255, 255);
+    padding: 8px 10px;
+    margin-top: -20px;
+}
+
+.options li img {
+    width: 30px; /* Tamaño de los iconos de las opciones */
+    height: 30px;
+    margin-right: 10px;
+}
+
+#popup.active {
+    transform: translateX(0);
+}
+
+#close-button {
+    background-color: #65388c; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 5px 40px; /* Espaciado interno */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Cursor al pasar el ratón */
+    margin-left: 130px;
+    margin-top: -10px;
+}
+
+#close-button:hover {
+    background-color: #4bb2db; /* Color de fondo del botón al pasar el ratón */
+}
+
+
+
+/* Estilos de ejemplo para la paginación */
+        .pagination {
+            list-style-type: none;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+        .pagination li {
+            display: inline;
+            margin-right: 5px;
+        }
+        .pagination li a {
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            color: rgb(255, 0, 0);
+        }
+        .pagination li.disabled {
+            pointer-events: none;
+            opacity: 0.6;
+        }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PERFIL</title>
+    <link th:href="@{/mdbootstrap/css/mdb.min.css}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome -->
+	<link th:href="@{/css/perfil.css}" rel="stylesheet"> <!-- Estilos personalizados -->
+</head>
+<body>
+    <!-- Contenedor de botones superior -->
+	<div class="contenedor-superior">
+	    <!-- Botón Regresar -->
+	    <a th:href="@{/menu/primero}" class="boton">Regresar</a>
+	    <!-- Botón Cerrar Sesión -->
+	    <a th:href="@{/proyecto/login}" class="boton" style="margin-right: 0;">Cerrar Sesión</a>
+	</div>
+
+    <!-- Contenedor principal -->
+    <div class="contenedor-principal">
+        <!-- Imagen de perfil -->
+        <img src="/img/Perfil.png" alt="Imagen de perfil" class="imagen-perfil">
+        
+        <!-- Contenedor de campos y botones -->
+        <div class="contenedor-campos">
+            <div class="campo">
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" placeholder="Escribe tu usuario aquí">
+            </div>
+            <div class="campo">
+                <label for="digito">Id:</label>
+                <input type="text" id="id" name="id" placeholder="Escribe tu Id aquí">
+            </div>
+            <div class="campo">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="4" placeholder="Escribe una descripción aquí"></textarea>
+                <!-- Botones para editar y borrar -->
+                <div class="contenedor-botones">
+                    <button class="boton">Editar</button>
+                    <button class="boton">Borrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" th:src="@{/mdbootstrap/js/mdb.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/script.js}"></script>
+</body>
+</html>

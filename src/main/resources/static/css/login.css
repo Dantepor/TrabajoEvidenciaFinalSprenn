@@ -1,0 +1,168 @@
+@charset "ISO-8859-1";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Arial, sans-serif; /* Aplica Montserrat como la fuente principal */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("/img/fondo2.gif") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+form {
+    width: 420px;
+    background: #ffffff; /* Cambia el color de fondo a blanco */
+    border: 2px solid rgba(36, 25, 25, 0.697);
+    backdrop-filter: blur(20px);
+    color: #1c151e6b;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+form h1 {
+    color: #181616;
+    font-size: 36px;
+    text-align: center;
+}
+
+form .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+form input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(36, 13, 13, 0.833);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #65388c;
+    padding: 20px 45px 20px 20px;
+}
+
+form input::placeholder {
+    color: hsl(0, 74%, 92%);
+}
+
+form i {
+    color: #65388c;
+    position: absolute;
+    right: 20px;
+    top: 11%;
+    transform: translateY(50%);
+    font-size: 20px;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinea verticalmente los elementos dentro del div */
+    font-size: 14.5px;
+    margin: -17px 0 17px;
+}
+
+.remember-me {
+    display: flex; /* Muestra los elementos en línea */
+    align-items: center; /* Alinea verticalmente los elementos dentro del div */
+}
+
+.remember-me label {
+    margin-left: 5px; /* Añade un pequeño espacio entre el cuadro de selección y el texto */
+    color: #666;
+    font-weight: 700;
+}
+
+.remember-me input[type="checkbox"]:checked + label {
+    color: #65388c; /* Cambia el color del texto cuando se selecciona */
+}
+
+.remember-forgot a {
+    color: #65388c;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+form .btn {
+    width: 100%;
+    height: 45px;
+    background: #65388c;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+form .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+form .register-link p a {
+    color: #65388c;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+form .register-link p {
+    color: #666;
+    font-weight: 700;
+}
+
+form .register-link p a:hover {
+    text-decoration: underline;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.logo {
+    width: 40px; /* Tamaño deseado */
+    height: 35px;
+	margin: 0px 10px;
+}
+
+.or-text {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #65388c; /* Color deseado */
+    font-weight: 700;
+}
+
+.logo-images {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo-images img {
+    width: 30px; /* Tamaño deseado */
+    height: auto;
+    margin: 0px 5px; /* Espacio entre las imágenes */
+}
+.input-box ::placeholder{
+	color: #5c5b5e;
+}

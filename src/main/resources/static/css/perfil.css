@@ -1,0 +1,79 @@
+        body {
+            background-image: url('/img/fondototal.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            padding: 250px;
+            display: flex;
+            justify-content: center; /* Centrar horizontalmente */
+            align-items: center; /* Centrar verticalmente */
+            position: relative; /* Posición relativa para el body */
+        }
+
+        .contenedor-principal {
+            display: flex; /* Para colocar elementos en línea */
+            flex-direction: row; /* Alinear los elementos horizontalmente */
+            align-items: center; /* Centrar elementos verticalmente */
+        }
+
+        /* Estilos para la imagen de perfil */
+        .imagen-perfil {
+            border-radius: 50%; /* Para darle forma redonda */
+            width: 450px; /* Tamaño deseado */
+            height: 450px; /* Tamaño deseado */
+            margin-right: 20px; /* Espacio a la derecha */
+        }
+
+        .contenedor-campos {
+            width: 400px; /* Cambiar el valor según sea necesario */
+            display: flex;
+            flex-direction: column;
+            color: white; /* Color del texto */
+            background-color: rgba(0, 0, 0, 0.5); /* Color de fondo transparente */
+            padding: 20px; /* Añadir un poco de espacio interno */
+            border-radius: 5px; /* Bordes redondeados */
+        }
+
+        .campo {
+            margin-bottom: 10px;
+        }
+
+        .campo label {
+            display: block;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .campo input[type="text"],
+        .campo textarea {
+            width: 100%; /* Ancho al 100% del contenedor */
+            padding: 10px; /* Aumentar el padding */
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .contenedor-botones {
+            display: flex;
+            justify-content: space-between; /* Espacio equitativo entre los botones */
+            margin-top: 20px; /* Espacio desde arriba */
+        }
+
+        .boton {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px; /* Espacio entre los botones */
+            margin-right: 5px; /* Espacio a la derecha */
+        }
+
+        .contenedor-superior {
+            position: absolute; /* Posición absoluta para colocar los botones */
+            top: 20px; /* Espacio desde arriba */
+            left: 20px; /* Espacio desde la izquierda */
+            display: flex;
+            justify-content: space-between; /* Espacio entre los botones */
+            width: calc(100% - 40px); /* Ancho del contenedor - espacio izquierdo y derecho */
+        }

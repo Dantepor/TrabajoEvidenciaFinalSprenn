@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OFERTAS</title>
+	<link th:href="@{/mdbootstrap/css/mdb.min.css}" rel="stylesheet">
+	<link th:href="@{/css/menu4.css}" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script th:src="@{/js/java.js}"></script>
+</head>
+<body>
+	<header>
+	        <nav class="menu-container">
+	            <ul class="menu">
+	                <li class="menu-item inicio">
+	                    <a th:href="@{/prueba1/hola}">
+	                        <img th:src="@{/img/GamerStar1.png}" width="50px" height="45px" alt="Inicio">
+	                    </a>
+	                </li>
+	                <li class="menu-item productos-large">
+	                    <div class="search-bar">
+	                        <i class="fas fa-search search-icon"></i>
+	                        <input type="text" placeholder="Buscar...">
+	                        <div class="dropdown">
+	                            <span class="dropbtn">Todas las categorías <i class="fas fa-chevron-down"></i></span>
+	                            <div class="dropdown-content">
+	                                <a href="#">Consolas</a>
+	                                <a href="#">Videojuegos</a>
+	                                <a href="#">Accesorios</a>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </li>
+	                <li class="menu-item categorias"><a th:href="@{/menu/soporte}"><i class="fas fa-comment"></i> Soporte</a></li>
+	                <li class="menu-item ofertas-small"><a href="#"><i class="fas fa-heart"></i> Lista de Deseos</a></li>
+	                <li class="menu-item contacto"><a th:href="@{/proyecto/login}"><i class="fas fa-user"></i> Iniciar Sesión / Regístrate</a></li>
+	                <li class="menu-item acerca-small">
+	                    <a href="#" id="flag-button">
+	                        <img th:src="@{/img/banderaper.png}" width="42px" height="30px" alt="Bandera de Perú">
+	                    </a>
+	                </li>
+	            </ul>
+	        </nav>
+	    </header>
+		<!--VENTANA EMERGENTE-->
+				    <div class="popup-container" id="popup">
+				        <div class="popup-content">
+				            <p style="font-weight: 700;">¡Hola, ConerSMG!</p>
+				            <div class="profile-info">
+								<img th:src="@{/img/wualax.jpeg}" class="profile-image" alt="Imagen de perfil">
+								<div class="profile-details">
+								    <h2>GameroWua</h2>
+				                    <p>Miembro desde el 2021</p>
+				                </div>
+				            </div>
+				            <ul class="options">
+				                <br>
+				                <!-- Opciones de la ventana emergente con iconos Font Awesome -->
+				                <li><a href="#"><i class="fas fa-heart"></i> Lista de Deseos</a></li>
+				                <li><a href="#"><i class="fas fa-shopping-cart"></i> Mi carrito de compras</a></li>
+				                <li><a href="#"><i class="fas fa-history"></i> Historial de Compras</a></li>
+				                <li><a href="#"><i class="fas fa-share-alt"></i> Redes Sociales</li>
+				                <li><a href="#"><i class="fas fa-gift"></i> Canjear código</a></li>
+				                <li><a href="#"><i class="fas fa-credit-card"></i> Gift Card</a></li>
+				                <li><a href="#"><i class="fas fa-cog"></i> Ajustes</a></li>
+				                <!-- Repite esto para las otras opciones -->
+				            </ul>
+				            <button id="close-button">Cerrar</button>
+				        </div>
+				    </div>
+		<div class="submenu">
+		    <a th:href="@{/menu/segundo}" class="submenu-item">Videojuegos</a>
+		    <a th:href="@{/menu/tercero}" class="submenu-item">Consolas</a>
+		    <a th:href="@{/menu/cuarto}" class="submenu-item">Accesorios</a>
+		    <a th:href="@{/menu/quinto}" class="submenu-item">Ofertas</a>
+		    <a th:href="@{/menu/sexto}" class="submenu-item">Novedades</a>
+		</div>
+	    <!--IMAGEN DE ACCESORIOS SECCION-->
+	    <div class="new-section">
+	    </div>
+	    <img class="nuevo-imagen"  th:src="@{/img/Banners1.png}" alt="Imagen de la nueva sección">
+	        <!--BARRA DE BUSQUEDA-->
+	        <div class="search-container1">
+	            <input type="text" class="search-bar1" placeholder="Buscar...">
+	            <div class="search-icon-container1">
+	                <i class="fas fa-search"></i>
+	            </div>
+	        </div>
+	    <!--SECCION MANDOS -->
+	<!-- Sección de Ofertas Productos-->
+	<div class="latest-accessories">
+	    <h2>TIEMPO LIMITADO</h2>
+	    <div class="accessory-grid">
+	        <div class="accessory-item">
+	            <img th:src="@{/img/MD1-Mando.png}" alt="Nuevo Accesorio 1">
+	            <h3 class="accessory-title">Audifono Gamer Hyper X 
+	                Stinger Core</h3>
+	                <div class="offer-ends">
+	                    <p>La Oferta termina en: <span class="offer-days">30 días</span></p>
+	                </div>
+	            <div class="accessory-offer-price">
+	                <p>S/ 179.00 <span class="accessory-original-price">S/ 235.00</span> <span class="accessory-discount">-24%</span></p>
+	            </div>
+	            <div class="accessory-description">
+	                <div class="line"></div>
+	                <p>Mandos y Gatillos</p>
+	                <span class="accessory-heart-icon">&#10084;</span>
+	            </div>
+	        </div>
+	        <!-- Repite este bloque para cada nuevo accesorio -->
+	        <div class="accessory-item">
+	            <img th:src="@{/img/MD2-Mando.png}" alt="Nuevo Accesorio 2">
+	            <h3 class="accessory-title1"> Audifono Airpods pro 2 Deluxe
+	            </h3>
+	            <div class="offer-ends">
+	                <p>La Oferta termina en: <span class="offer-days">30 días</span></p>
+	            </div>
+	            <div class="accessory-offer-price">
+	                <p>S/ 179.00 <span class="accessory-original-price">S/ 235.00</span> <span class="accessory-discount">-24%</span></p>
+	            </div>
+	            <div class="accessory-description">
+	                <div class="line"></div>
+	                <p>Mandos y Gatillos</p>
+	                <span class="accessory-heart-icon">&#10084;</span>
+	            </div>
+	        </div>
+	        <!-- Repite este bloque para cada nuevo accesorio -->
+	        <div class="accessory-item">
+	            <img th:src="@{/img/MD3-Mando.png}" alt="Nuevo Accesorio 3">
+	            <h3 class="accessory-title">Mando de Celular para 
+	                juegos GM3</h3>
+	                <div class="offer-ends">
+	                    <p>La Oferta termina en: <span class="offer-days">30 días</span></p>
+	                </div>
+	            <div class="accessory-offer-price">
+	                <p>S/ 305.00 <span class="accessory-original-price">S/ 355.00</span> <span class="accessory-discount">-14%</span></p>
+	            </div>
+	            <div class="accessory-description">
+	                <div class="line"></div>
+	                <p>Mandos y Gatillos</p>
+	                <span class="accessory-heart-icon">&#10084;</span>
+	            </div>
+	        </div>
+	        <!-- Repite este bloque para cada nuevo accesorio -->
+	        <div class="accessory-item">
+	            <img th:src="@{/img/MD4-Mando.png}" alt="Nuevo Accesorio 4">
+	            <h3 class="accessory-title1"> Microfrono Gamer 
+	                Fifine AM8</h3>
+	                <div class="offer-ends">
+	                    <p>La Oferta termina en: <span class="offer-days">30 días</span></p>
+	                </div>
+	            <div class="accessory-offer-price">
+	                <p>S/ 305.00 <span class="accessory-original-price">S/ 355.00</span> <span class="accessory-discount">-14%</span></p>
+	            </div>
+	            <div class="accessory-description">
+	                <div class="line"></div>
+	                <p>Mandos y Gatillos</p>
+	                <span class="accessory-heart-icon">&#10084;</span>
+	            </div>
+	        </div>
+	        <!-- Fin del bloque repetido -->
+	    </div>
+	</div>
+	<!--PUBLICIDAD-->
+	<div class="new-section1">
+	    <h2 class="titulo-publicidad" style="margin-top: 20px; font-weight: 700;">OFERTA DE LA SEMANA</h2>
+	</div>
+	<img class="nuevo-imagen1"  th:src="@{/img/Ps-Publicidad.png}" alt="Imagen de la nueva sección">
+	<!--SECCION DE TIENDA OFERTAS-->
+	<!-- Sección de Accesorios primero-->
+	<div class="latest-accessories">
+	    <h2 style="margin-top: 460px;">TIENDA DE OFERTAS</h2>
+	    <div class="accessory-grid">
+	        <div class="accessory-item">
+	            <img th:src="@{/img/AC1-Equipo.png}" alt="Nuevo Accesorio 1">
+	            <h3 class="accessory-title">Audifono Gamer Hyper X 
+	                Stinger Core</h3>
+	                <div class="offer-ends">
+	                    <p>La Oferta termina en: <span class="offer-days">30 días</span></p>
+	                </div>
+	            <div class="accessory-offer-price">
+	                <p>S/ 179.00 <span class="accessory-original-price">/ 235.00</span> <span class="accessory-discount">-24%</span></p>
+	            </div>
+	            <div class="accessory-description">
+	                <div class="line"></div>
+	                <p>Audifono Gamer, Audífonos</p>
+	                <span class="accessory-heart-icon">&#10084;</span>
+	            </div>
+	        </div>
+	        <!-- Repite este bloque para cada nuevo accesorio -->
+	        <div class="accessory-item">
+	            <img th:src="@{/img/AC2-Equipo.png}" alt="Nuevo Accesorio 2">
+	            <h3 class="accessory-title1"> Audifono Airpods pro 2 Deluxe
+	            </h3>
+	            <div class="offer-ends">
+	                <p>La Oferta termina en: <span class="offer-days">30 días</span></p>
+	            </div>
+	            <div class="accessory-offer-price">
+	                <p>S/ 160.00<span class="accessory-original-price">S/ 190.00</span> <span class="accessory-discount">-16%</span></p>
+	            </div>
+	            <div class="accessory-description">
+	                <div class="line"></div>
+	                <p>Audifono Gamer, Audífonos</p>
+	                <span class="accessory-heart-icon">&#10084;</span>
+	            </div>
+	        </div>
+	        <!-- Repite este bloque para cada nuevo accesorio -->
+	        <div class="accessory-item">
+	            <img th:src="@{/img/AC3-Equipo.png}" alt="Nuevo Accesorio 3">
+	            <h3 class="accessory-title">Mando de Celular para 
+	                juegos GM3</h3>
+	                <div class="offer-ends">
+	                    <p>La Oferta termina en: <span class="offer-days">30 días</span></p>
+	                </div>
+	            <div class="accessory-offer-price">
+	                <p> S/ 79.00 <span class="accessory-original-price">S/ 99.00</span> <span class="accessory-discount">-20%</span></p>
+	            </div>
+	            <div class="accessory-description">
+	                <div class="line"></div>
+	                <p>Audifono Gamer, Audífonos</p>
+	                <span class="accessory-heart-icon">&#10084;</span>
+	            </div>
+	        </div>
+	        <!-- Repite este bloque para cada nuevo accesorio -->
+	        <div class="accessory-item">
+	            <img th:src="@{/img/AC4-Equipo.png}" alt="Nuevo Accesorio 4">
+	            <h3 class="accessory-title1"> Microfrono Gamer 
+	                Fifine AM8</h3>
+	                <div class="offer-ends">
+	                    <p>La Oferta termina en: <span class="offer-days">30 días</span></p>
+	                </div>
+	            <div class="accessory-offer-price">
+	                <p>S/ 305.00 <span class="accessory-original-price">S/ 355.00</span> <span class="accessory-discount">-14%</span></p>
+	            </div>
+	            <div class="accessory-description">
+	                <div class="line"></div>
+	                <p>Audifono Gamer, Audífonos</p>
+	                <span class="accessory-heart-icon">&#10084;</span>
+	            </div>
+	        </div>
+	        <!-- Fin del bloque repetido -->
+	    </div>
+	</div>
+	<!-- Sección de Ofertas Productos-->
+	<div class="latest-accessories">
+	    <div class="accessory-grid">
+	        <div class="accessory-item">
+	            <img th:src="@{/img/AC5-Equipo.png}" alt="Nuevo Accesorio 1">
+	            <h3 class="accessory-title"> Audifono Gamer Borfone 
+	                ESB06 Edition</h3>
+	                <div class="offer-ends">
+	                    <p>La Oferta termina en: <span class="offer-days">30 días</span></p>
+	                </div>
+	            <div class="accessory-offer-price">
+	                <p> S/ 95.00 <span class="accessory-original-price">S/ 135.00</span> <span class="accessory-discount">-10%</span></p>
+	            </div>
+	            <div class="accessory-description">
+	                <div class="line"></div>
+	                <p>Audifono Gamer, Audífonos</p>
+	                <span class="accessory-heart-icon">&#10084;</span>
+	            </div>
+	        </div>
+	        <!-- Repite este bloque para cada nuevo accesorio -->
+	        <div class="accessory-item">
+	            <img th:src="@{/img/AC6-Equipo.png}" alt="Nuevo Accesorio 2">
+	            <h3 class="accessory-title1">  Audífono Inalámbrico JBL 
+	                Tune 230 Nc
+	            </h3>
+	            <div class="offer-ends">
+	                <p>La Oferta termina en: <span class="offer-days">30 días</span></p>
+	            </div>
+	            <div class="accessory-offer-price">
+	                <p>S/ 360.00 <span class="accessory-original-price">S/ 390.00</span> <span class="accessory-discount">-10%</span></p>
+	            </div>
+	            <div class="accessory-description">
+	                <div class="line"></div>
+	                <p>Audifono Gamer, Audífonos</p>
+	                <span class="accessory-heart-icon">&#10084;</span>
+	            </div>
+	        </div>
+	        <!-- Repite este bloque para cada nuevo accesorio -->
+	        <div class="accessory-item">
+	            <img th:src="@{/img/AC7-Equipo.png}" alt="Nuevo Accesorio 3">
+	            <h3 class="accessory-title"> Audífono JBL Live 460 NC Deluxe</h3>
+	                <div class="offer-ends">
+	                    <p>La Oferta termina en: <span class="offer-days">30 días</span></p>
+	                </div>
+	            <div class="accessory-offer-price">
+	                <p>S/ 360.00 <span class="accessory-original-price">S/ 399.00</span> <span class="accessory-discount">-20%</span></p>
+	            </div>
+	            <div class="accessory-description">
+	                <div class="line"></div>
+	                <p>Audifono Gamer, Audífonos</p>
+	                <span class="accessory-heart-icon">&#10084;</span>
+	            </div>
+	        </div>
+	        <!-- Repite este bloque para cada nuevo accesorio -->
+	        <div class="accessory-item">
+	            <img th:src="@{/img/AC8-Equipo.png}" alt="Nuevo Accesorio 4">
+	            <h3 class="accessory-title1">  Audífono Inalámbrico 
+	                Skullcandy Dime XT</h3>
+	                <div class="offer-ends">
+	                    <p>La Oferta termina en: <span class="offer-days">30 días</span></p>
+	                </div>
+	            <div class="accessory-offer-price">
+	                <p>S/ 145.00 <span class="accessory-original-price">S/ 165.00</span> <span class="accessory-discount">-10%</span></p>
+	            </div>
+	            <div class="accessory-description">
+	                <div class="line"></div>
+	                <p>Audifono Gamer, Audífonos</p>
+	                <span class="accessory-heart-icon">&#10084;</span>
+	            </div>
+	        </div>
+	        <!-- Fin del bloque repetido -->
+	    </div>
+	</div>
+	<!--PIE DE PAGINA-->
+	<div class="footer-container">
+	    <!-- Primera sección -->
+	    <div class="footer-section" style="margin-left: 30px;">
+	        <img th:src="@{/img/2logogamestar.png}" alt="Imagen de pie de página" style="margin-bottom: 15px;">
+	        <div class="footer-section-text">
+	            <p>En GamerStart, nos apasiona el mundo de los videojuegos, seleccionando las mejores marcas a precios competitivos. Nuestra misión es proporcionar una experiencia de compra excepcional para todos los gamers.</p>
+	        </div>
+	        <div class="footer-images" style="margin-top: 15px;">
+	            <img th:src="@{/img/PG-Icon1.png}" alt="Imagen 1">
+	            <img th:src="@{/img/PG-Icon2.png}" alt="Imagen 2">
+	            <img th:src="@{/img/PG-Icon3.png}" alt="Imagen 3">
+	            <img th:src="@{/img/PG-Icon4.png}" alt="Imagen 4">
+	        </div>
+	    </div>
+
+	    <!-- Segunda sección -->
+	    <div class="footer-section" style="margin-top: 10px;">
+	        <h4>Tienda</h4>
+	        <p>Juegos</p>
+	        <p>Equipo</p>
+	        <p>Venta y ofertas</p>
+	        <p>Servicio en Línea</p>
+	        <h4 style="margin-top: 20px;">Política y Términos</h4>
+	        <p>Política de Privacidad</p>
+	        <p>Términos y Condiciones</p>
+	        <p>Política de Devoluciones</p>
+	        <p>Envíos y Entregas</p>
+	    </div>
+
+	    <!-- Tercera sección -->
+	    <div class="footer-section" style="margin-top: 10px;">
+	        <h4>Soporte</h4>
+	        <p>Preguntas Frecuentes</p>
+	        <p>Política de Devoluciones</p>
+	        <p>Tiempos y Costos de Envío</p>
+	        <p>Contacto de Soporte</p>
+	        <p>Garantía de Productos</p>
+	    </div>
+
+	    <!-- Cuarta sección -->
+	    <div class="footer-section" style="margin-top: 10px;">
+	        <h4>Contactanos</h4>
+	        <p>Dirección: Av. Garcilaso de la Vega, Lima, Peru</p>
+	        <p>Email: gamerstarsoporte@soporte.com</p>
+	        <p>Teléfono: +123 456 7890</p>
+	        <img th:src="@{/img/PG-Mapa.png}" alt="Imagen de pie de página" style="margin-top: 20px;">
+	    </div>
+	</div>
+	<div class="copyright-container">
+	    <p>2024 © TODOS LOS DERECHOS RESERVADOS</p>
+	</div>
+		<script type="text/javascript" th:src="@{/mdbootstrap/js/mdb.min.js}"></script>
+		<script type="text/javascript" th:src="@{/js/script.js}"></script>
+</body>
+</html>
